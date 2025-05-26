@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Split Bill App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React app, made as part of the "ultimate react" course by Jonas Schmedtmann, to split bills with friends and track balances. Add friends, record shared expenses, and calculate who owes whom.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+* 👥 Add new friends with a name and avatar
+* ✅ Select a friend and split a bill
+* 💵 Tracks who owes whom and by how much
+* 🔄 Toggle selection and clear forms
+* 🎯 Dynamic balance updates with clear visual cues
 
-### `npm start`
+## 🧱 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* React 18+
+* Functional components with hooks (`useState`)
+* UUID with `crypto.randomUUID()`
+* Dynamic image URLs with `https://i.pravatar.cc`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Node.js >= 14
+* npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/TamsinLloyd99/Split-Bill-App.git
+cd Split-Bill-App
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Run the App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+This launches the app in your browser at `http://localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🧑‍💻 Usage Guide
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Add a Friend**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   * Click `Add Friend`
+   * Fill in name and optional image URL
+   * Submit to add to the sidebar list
 
-## Learn More
+2. **Select a Friend**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   * Click `Select` on any friend to open the bill form
+   * Click again to `Close` and deselect
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Split a Bill**
 
-### Code Splitting
+   * Enter total bill amount
+   * Enter how much **you paid**
+   * Choose who paid the bill
+   * Click `Add` to split and update balances
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Balances**
 
-### Analyzing the Bundle Size
+   * Green = they owe you
+   * Red = you owe them
+   * Grey = even
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📁 Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+Split-Bill-App/
+├── public/
+├── src/
+│   ├── App.js
+│   ├── index.js
+│   └── styles.css
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## [Deployed App](https://react-bill-splitting-app.netlify.app/)
 
-### Deployment
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+MIT License — free to use and modify.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with 💙 for sharing tabs and splitting bills.
